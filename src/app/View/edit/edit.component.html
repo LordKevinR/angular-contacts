@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container full">
+
+  <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
+
+    <div class="form-group">
+
+        <label for="exampleFormControlInput1">FirstName</label>
+        <input type="text" class="form-control" placeholder="firstName" formControlName="firstName">
+
+        <label for="exampleFormControlInput1">LastName</label>
+        <input type="text" class="form-control" placeholder="lastName" formControlName="lastName">
+
+        <label for="exampleFormControlInput1">Phone Number</label>
+        <input type="text" class="form-control" placeholder="Phone Number" formControlName="phoneNumber">
+
+        <label for="exampleFormControlInput1">Email</label>
+        <input type="text" class="form-control" placeholder="Name" formControlName="firstName">
+    </div>
+
+    <button type="submit" class="btn my-4 mx-2 btn-primary">Save</button>
+    <button type="button" class="btn my-4 mx-2 btn-danger" (click)="delete()">Delete</button>
+    <button type="button" class="btn my-4 mx-2 btn-secondary" (click)="cancel()">Cancel</button>
+
+  </form>
+
+</div>
+
+<app-footer></app-footer>

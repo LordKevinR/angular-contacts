@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="mt-5 container">
+
+  <h2 class="text-center">Contacts List</h2>
+  <button class="btn mx-auto my-5 btn-primary" (click)="newContact()" >New Contact</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">PhoneNumber</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts " (click) = "editContact(contact.id)" >
+        <th class="cursor" scope="row">{{contact.id}}</th>
+        <td class="cursor">{{contact.firstName}}</td>
+        <td class="cursor">{{contact.lastName}}</td>
+        <td class="cursor">{{contact.phoneNumber}}</td>
+        <td class="cursor">{{contact.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<app-footer></app-footer>
